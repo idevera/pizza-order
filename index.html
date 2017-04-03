@@ -7,59 +7,76 @@
   <title>Irene's Healthy Pizza</title>
 </head>
 <body>
-  <div class="container">
+  <div class="jumbotron">
     <h1>Irene's Healthy Pizza</h1>
+  </div>
     <!--From begins here-->
-    <form id="order-form">
-      <!--Pizza Size-->
-      <h3>Pizza Size</h3>
-      <div class="radio">
-        <label>
-          <input type="radio" name="pizza-size" value="small" checked>
-          Small
-        </label>
-      </div>
-      <div class="radio">
-        <label>
-          <input type="radio" name="pizza-size" value="medium">
-          Medium
-        </label>
-      </div>
-      <div class="radio">
-        <label>
-          <input type="radio" name="pizza-size" value="large">
-          Large
-        </label>
-      </div>
-      <div class="radio">
-        <label>
-          <input type="radio" name="pizza-size" value="x-large">
-          X-Large
-        </label>
-      </div>
-      <!--Checkboxes for topping selection-->
-      <div class="form-group">
-        <h3>Choose your toppings</h3>
-        <p><i><strong>Note:</strong> All pizzas come with tomato sauce and one standard layer of cheese. Only select cheese if you would like extra cheese</i></p>
-        <input type="checkbox" name="topping" value="extra-cheese">Extra Cheese<br>
-        <input type="checkbox" name="topping" value="pepperoni">Pepperoni<br>
-        <input type="checkbox" name="topping" value="pineapple">Pineapple<br>
-        <input type="checkbox" name="topping" value="olives">Olives<br>
-        <input type="checkbox" name="topping" value="ham">Canadian Bacon<br>
-        <input type="checkbox" name="topping" value="sausage">Sausage<br>
-        <input type="checkbox" name="topping" value="jalepenos">Jalepenos<br>
-        <input type="checkbox" name="topping" value="peppers">Green and Red Peppers<br>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <form id="order-form">
+          <!--Pizza Size-->
+          <h3>Pizza Size</h3>
+          <div class="radio">
+            <label>
+              <input type="radio" name="pizza-size" value="small" checked>
+              Small - $5.00
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="pizza-size" value="medium">
+              Medium - $10.00
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="pizza-size" value="large">
+              Large - $15.00
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="pizza-size" value="x-large">
+              X-Large - $20.00
+            </label>
+          </div>
+          <!--Checkboxes for topping selection-->
+          <div class="form-group">
+            <h3>Choose your toppings</h3>
+            <p><i><strong>Note:</strong> All pizzas come with tomato sauce and one standard layer of cheese. Only select cheese if you would like extra cheese</i></p>
+            <p>Each topping: $0.50 each</p>
+            <input type="checkbox" name="topping" value="extra-cheese">Extra Cheese<br>
+            <input type="checkbox" name="topping" value="pepperoni">Pepperoni<br>
+            <input type="checkbox" name="topping" value="pineapple">Pineapple<br>
+            <input type="checkbox" name="topping" value="olives">Olives<br>
+            <input type="checkbox" name="topping" value="ham">Canadian Bacon<br>
+            <input type="checkbox" name="topping" value="sausage">Sausage<br>
+            <input type="checkbox" name="topping" value="jalepenos">Jalepenos<br>
+            <input type="checkbox" name="topping" value="peppers">Green and Red Peppers<br>
 
-
-
-      <!--submit form button-->
-      <br>
-      <button type="submit" class="btn">Order</button>
-    </form>
-    <div>
-      <p id="base-cost"></p>
-      <p id="plus-toppings"></p>
-      <p id ="cost"></p>
+          <!--submit form button-->
+          <br>
+          <button type="submit" class="btn">Order</button>
+        </form>
+      </div>
+    </div>
+    <!--Display total cost-->
+    <div class="row">
+      <div class="col-md-6">
+        <table class="table table-bordered">
+          <tr>
+            <td>Base Pizza Price:</td>
+            <td><span id="base-cost"></span></td>
+          <tr>
+            <td>Added toppings total:</td>
+            <td><span id="plus-toppings"></span></td>
+          <tr>
+            <td>Total price of your order:</td>
+            <td><span id ="cost"></span></td>
+        </table>
+        <img src="img/pizza.jpg" alt="Healthy Pizza" class="img-rounded">
+      </div>
     </div>
   </div>
 </body>

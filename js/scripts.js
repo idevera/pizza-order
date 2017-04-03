@@ -25,7 +25,7 @@ Order.prototype.costOfToppings = function(){
   }
 }
 
-//Prototype method to calculate total toppings cost
+//Prototype method to calculate total pizza cost
 Order.prototype.totalCost = function(){
   return this.costOfPizzaSize() + this.costOfToppings();
 }
@@ -46,12 +46,10 @@ $(document).ready(function(){
     //Create new object after user submits the form with selections
     var newOrder = new Order(inputPizzaSize, toppingsList);
 
-    //Displays cost to user
+    //Displays cost to user and replaces with each new submit
     $("#base-cost").html(newOrder.costOfPizzaSize().toFixed(2));
     $("#plus-toppings").html(newOrder.costOfToppings().toFixed(2));
     $("#cost").html(newOrder.totalCost().toFixed(2));
 
   });
 });
-
-//Prototype method for the cost of a pizza!
