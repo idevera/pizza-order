@@ -6,18 +6,23 @@
 
 //Prototype method to calculate the cost of the pizza
 
+
+
+
 //Interface Logic
 $(document).ready(function(){
   $("form#order-form").submit(function(event){
     event.preventDefault();
 
     var chosenPizzaSize = $("input:radio[name=pizza-size]:checked").val();
-  
+
+    var toppingsList = [];
     $("input:checkbox[name=topping]:checked").each(function(){
       var chosenToppings = $(this).val();
+      toppingsList.push(chosenToppings);
     });
 
-
+    alert(toppingsList);
     //Create new object after user submits the form with selections
     // var userOrder = new Order(chosenPizzaSize, toppings);
   });
