@@ -47,11 +47,9 @@ $(document).ready(function(){
     var newOrder = new Order(inputPizzaSize, toppingsList);
 
     //Displays cost to user
-    $("#base-cost").append(newOrder.costOfPizzaSize().toFixed(2));
-    $("#plus-toppings").append(newOrder.costOfToppings().toFixed(2));
-    $("#cost").append(newOrder.totalCost().toFixed(2));
-
-
+    $("#base-cost").html(newOrder.costOfPizzaSize().toFixed(2));
+    $("#plus-toppings").html(newOrder.costOfToppings().toFixed(2));
+    $("#cost").html(newOrder.totalCost().toFixed(2));
 
   });
 });
