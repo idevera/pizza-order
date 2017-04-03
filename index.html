@@ -9,15 +9,59 @@
 <body>
   <div class="container">
     <h1>Irene's Healthy Pizza</h1>
+    <!--From begins here-->
     <form id="order-form">
-      <div class="radio" name="pizza-size" value="small">Small
+      <!--Pizza Size-->
+      <h3>Pizza Size</h3>
+      <div class="radio">
+        <label>
+          <input type="radio" name="pizza-size" value="small" checked>
+          Small
+        </label>
       </div>
-    </form>
+      <div class="radio">
+        <label>
+          <input type="radio" name="pizza-size" value="medium">
+          Medium
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="pizza-size" value="large">
+          Large
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="pizza size" value="x-large">
+          X-Large
+        </label>
+      </div>
+      <!--Checkboxes for topping selection-->
+      <div class="form-group">
+        <h3>Choose your toppings</h3>
+        <p><i><strong>Note:</strong> All pizzas come with tomato sauce and one standard layer of cheese. Only select cheese if you would like extra cheese</i></p>
+        <input type="checkbox" name="topping" value="cheese">Extra Cheese<br>
+        <input type="checkbox" name="topping" value="pepperoni">Pepperoni<br>
+        <input type="checkbox" name="topping" value="pineapple">Pineapple<br>
+        <input type="checkbox" name="topping" value="olives">Olives<br>
+        <input type="checkbox" name="topping" value="ham">Canadian Bacon<br>
+        <input type="checkbox" name="topping" value="sausuage">Sausage<br>
+        <input type="checkbox" name="topping" value="jalepenos">Jalepenos<br>
+        <input type="checkbox" name="topping" value="peppers">Green and Red Peppers<br>
 
+
+
+      <!--submit form button-->
+      <br>
+      <button type="submit" class="btn">Order</button>
+    </form>
+  </div>
 </body>
 </html>
 
 
-Allow the user to choose toppings and size for the pizza they'd like to order.
+Allow the user to choose toppings
+
 Create a pizza object constructor with properties for toppings and size.
 Create a prototype method for the cost of a pizza depending on the selections chosen. Use your own formula for this.
