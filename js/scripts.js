@@ -3,18 +3,13 @@ function Order(size, toppings){
   this.size = size;
   this.toppings = toppings;
 }
-//Variables
-
-// var smallPizza = 5;
-// var mediumPizza = 10
-// var largePizza = 15
-// var xLargePizza = 20
 
 //Prototype method to calculate the cost of the pizza
-// Order.prototype.orderCost = function(){
-//   if (inputPizzaSize === "small") {
-//   }
-// }
+Order.prototype.orderCost = function(){
+  if (this.size === "small") {
+    return 5;
+  }
+}
 
 
 
@@ -34,7 +29,8 @@ $(document).ready(function(){
     //Create new object after user submits the form with selections
     var newOrder = new Order(inputPizzaSize, toppingsList);
 
-    alert(newOrder);
+    console.log(newOrder.orderCost());
+
     // $("#cost").show(newOrder.orderCost());
 
   });
