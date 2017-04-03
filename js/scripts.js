@@ -3,27 +3,31 @@
 function Order(size, toppings){
   this.size = size;
   this.toppings = toppings;
-  this.cost = "";
 }
 
 //Prototype method to calculate the cost of pizza size
 Order.prototype.costOfPizzaSize = function(){
   if (this.size === "small") {
-    return this.cost = 5;
+    return 5;
   } else if (this.size === "medium") {
-    return this.cost = 10;
+    return  10;
   } else if (this.size === "large") {
-    return this.cost = 15;
+    return 15;
   } else {
-    return this.cost = 20;
+    return 20;
   }
 }
 
 //Prototype method to calculate cost of toppings
 Order.prototype.costOfToppings = function(){
   for (var index = 0; index <= this.toppings.length; index += 1) {
-    return this.toppings.length * 1.00
+    return this.toppings.length * 0.50;
   }
+}
+
+//Prototype method to calculate total toppings cost
+Order.prototype.totalCost = function(){
+  return this.costOfPizzaSize() + this.costOfToppings();
 }
 
 //Interface Logic
@@ -42,10 +46,12 @@ $(document).ready(function(){
     //Create new object after user submits the form with selections
     var newOrder = new Order(inputPizzaSize, toppingsList);
 
-    console.log(newOrder.costOfPizzaSize());
-    console.log(newOrder.costOfToppings());
+    //Displays cost to user
+    $("#base-cost").append(newOrder.costOfPizzaSize().toFixed(2));
+    $("#plus-toppings").append(newOrder.costOfToppings().toFixed(2));
+    $("#cost").append(newOrder.totalCost().toFixed(2));
 
-    // $("#cost").show(newOrder.orderCost());
+
 
   });
 });
