@@ -22,8 +22,17 @@ This webpage will allow a user to be able to choose toppings and pizza size when
 
 This webpage will:
 
-1.Take input from a user
+1. Take input from a user
+Input: Pizza size, all pizza toppings
+Output: Variable
 
+2. Calculate the total pizza cost
+Input: Define each cost of pizza size and all toppings
+Output: Display $ amount to user
+
+3. Allow to restart order without refreshing
+Input: Make selections
+Output: Recalculate total cost
 
 
 ### Contact information
