@@ -4,11 +4,11 @@
   <link href="css/styles.css" rel="stylesheet" type="text/css">
   <script src="js/jquery-3.2.0.js"></script>
   <script src="js/scripts.js"></script>
-  <title>Irene's Healthy Pizza</title>
+  <title>Yummy Healthy Pizza Kitchen</title>
 </head>
 <body>
   <div class="jumbotron">
-    <h1>Irene's Healthy Pizza</h1>
+    <h1>Yummy Healthy Pizza Kitchen</h1>
   </div>
     <!--From begins here-->
   <div class="container">
@@ -44,37 +44,40 @@
           <!--Checkboxes for topping selection-->
           <div class="form-group">
             <h3>Choose your toppings</h3>
-            <p><i><strong>Note:</strong> All pizzas come with tomato sauce and one standard layer of cheese. Only select cheese if you would like extra cheese</i></p>
-            <p>Each topping: $0.50 each</p>
-            <input type="checkbox" name="topping" value="extra-cheese">Extra Cheese<br>
-            <input type="checkbox" name="topping" value="pepperoni">Pepperoni<br>
-            <input type="checkbox" name="topping" value="pineapple">Pineapple<br>
-            <input type="checkbox" name="topping" value="olives">Olives<br>
-            <input type="checkbox" name="topping" value="ham">Canadian Bacon<br>
-            <input type="checkbox" name="topping" value="sausage">Sausage<br>
-            <input type="checkbox" name="topping" value="jalepenos">Jalepenos<br>
-            <input type="checkbox" name="topping" value="peppers">Green and Red Peppers<br>
+            <p><small><i><strong>Note:</strong> All pizzas come with tomato sauce and one standard layer of cheese. Only select cheese if you would like extra cheese</i></small></p>
+            <p>**Each topping: $0.50 each</p>
+            <input type="checkbox" name="topping" value="extra-cheese"> Extra Cheese<br>
+            <input type="checkbox" name="topping" value="pepperoni"> Pepperoni<br>
+            <input type="checkbox" name="topping" value="pineapple"> Pineapple<br>
+            <input type="checkbox" name="topping" value="olives"> Olives<br>
+            <input type="checkbox" name="topping" value="ham"> Canadian Bacon<br>
+            <input type="checkbox" name="topping" value="sausage"> Sausage<br>
+            <input type="checkbox" name="topping" value="jalepenos"> Jalepenos<br>
+            <input type="checkbox" name="topping" value="peppers"> Green and Red Peppers<br>
 
           <!--submit form button-->
           <br>
-          <button type="submit" class="btn">Order</button>
+          <button type="submit" class="btn btn-primary btn-lg btn-block">Order my Pizza!</button>
         </form>
       </div>
     </div>
+    <br>
     <!--Display total cost-->
     <div class="row">
       <div class="col-md-6">
         <table class="table table-bordered">
+          <h4>Total:</h4>
           <tr>
             <td>Base Pizza Price:</td>
-            <td><span id="base-cost"></span></td>
+            <td>$ <span id="base-cost"> </span></td>
           <tr>
             <td>Added toppings total:</td>
-            <td><span id="plus-toppings"></span></td>
+            <td>$ <span id="plus-toppings"> </span></td>
           <tr>
             <td>Total price of your order:</td>
-            <td><span id ="cost"></span></td>
+            <td>$ <span id ="cost"></span></td>
         </table>
+        <h2>Thank you for ordering!</h2>
         <img src="img/pizza.jpg" alt="Healthy Pizza" class="img-rounded">
       </div>
     </div>
