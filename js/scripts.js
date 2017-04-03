@@ -1,8 +1,8 @@
 //Business Logic
-// function Order(size,toppings){
-//   this.size = size;
-//   this.toppings = toppings;
-// }
+function Order(size, toppings){
+  this.size = size;
+  this.toppings = toppings;
+}
 
 //Prototype method to calculate the cost of the pizza
 
@@ -14,17 +14,17 @@ $(document).ready(function(){
   $("form#order-form").submit(function(event){
     event.preventDefault();
 
-    var chosenPizzaSize = $("input:radio[name=pizza-size]:checked").val();
+    var inputPizzaSize = $("input:radio[name=pizza-size]:checked").val();
 
     var toppingsList = [];
     $("input:checkbox[name=topping]:checked").each(function(){
-      var chosenToppings = $(this).val();
-      toppingsList.push(chosenToppings);
+      var inputToppings = $(this).val();
+      toppingsList.push(inputToppings);
     });
 
-    alert(toppingsList);
     //Create new object after user submits the form with selections
-    // var userOrder = new Order(chosenPizzaSize, toppings);
+    var newOrder = new Order(inputPizzaSize, toppingsList);
+
   });
 });
 
