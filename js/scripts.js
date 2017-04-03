@@ -3,25 +3,26 @@
 function Order(size, toppings){
   this.size = size;
   this.toppings = toppings;
+  this.cost = "";
 }
 
 //Prototype method to calculate the cost of pizza size
 Order.prototype.costOfPizzaSize = function(){
   if (this.size === "small") {
-    return 5;
+    return this.cost = 5;
   } else if (this.size === "medium") {
-    return 10;
+    return this.cost = 10;
   } else if (this.size === "large") {
-    return 15;
+    return this.cost = 15;
   } else {
-    return 20;
+    return this.cost = 20;
   }
 }
 
 //Prototype method to calculate cost of toppings
 Order.prototype.costOfToppings = function(){
-  for(var index = 0; index <= this.toppings.length; index += 1) {
-    console.log(index);
+  for (var index = 0; index <= this.toppings.length; index += 1) {
+    return this.toppings.length * 1.00
   }
 }
 
