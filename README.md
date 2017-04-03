@@ -18,6 +18,14 @@ This webpage will allow a user to be able to choose toppings and pizza size when
 
 * Bootstrap
 
+## Specifications
+
+This webpage will:
+
+1.Take input from a user
+
+
+
 ### Contact information
 
 johndoe@gmail.com
